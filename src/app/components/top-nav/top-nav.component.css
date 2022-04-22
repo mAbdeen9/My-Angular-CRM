@@ -15,6 +15,7 @@ img {
   position: absolute;
   width: calc(100% - 300px);
   left: 300px;
+  top: 0;
   min-height: 100vh;
   background-color: #fff;
   transition: 0.5s;
@@ -45,7 +46,7 @@ img {
   top: 0;
   width: 60px;
   height: 60px;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   display: flex;
   justify-content: center;
   align-items: center;

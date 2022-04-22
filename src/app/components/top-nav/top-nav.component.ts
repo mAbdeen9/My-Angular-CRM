@@ -1,11 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.css'],
 })
 export class TopNavComponent implements OnInit {
+  faBars = faBars;
   @Output() messageEvent = new EventEmitter();
   userName: string | undefined;
   constructor() {}

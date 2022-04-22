@@ -16,6 +16,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
 import { MsgFromServerComponent } from './components/msg-from-server/msg-from-server.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent],
@@ -27,6 +28,7 @@ import { MsgFromServerComponent } from './components/msg-from-server/msg-from-se
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,8 +3,12 @@
     <ul>
       <li>
         <a>
-          <span class="icon"><i class="fa-solid fa-a"></i></span>
-          <span class="title">Brand Name</span>
+          <span class="icon"
+            ><fa-icon style="font-size: 1.4rem" [icon]="faA"></fa-icon>
+          </span>
+          <span style="margin-top: 3px; font-weight: bold" class="title"
+            >Angular Crm</span
+          >
         </a>
       </li>
       <li
@@ -14,7 +18,9 @@
         #dash
       >
         <a>
-          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="icon"
+            ><fa-icon style="font-size: 1.2rem" [icon]="faHouse"></fa-icon
+          ></span>
           <span #dash class="title">Dashboard</span>
         </a>
       </li>
@@ -33,7 +39,9 @@
         #Customers
       >
         <a>
-          <span class="icon"><i class="fa-solid fa-user-group"></i></span>
+          <span class="icon"
+            ><fa-icon style="font-size: 1.2rem" [icon]="faUserGroup"></fa-icon
+          ></span>
           <span class="title">Customers</span>
         </a>
       </li>
@@ -44,7 +52,9 @@
         #Contacts
       >
         <a>
-          <span class="icon"><i class="fa-solid fa-address-card"></i></span>
+          <span class="icon"
+            ><fa-icon style="font-size: 1.2rem" [icon]="faAddressCard"></fa-icon
+          ></span>
           <span class="title">Contacts</span>
         </a>
       </li>
@@ -56,8 +66,11 @@
       >
         <a>
           <span class="icon"
-            ><i class="fa-solid fa-file-chart-column"></i
-          ></span>
+            ><fa-icon
+              style="font-size: 1.2rem"
+              [icon]="faFileArchive"
+            ></fa-icon>
+          </span>
           <span class="title">Reports</span>
         </a>
       </li>
@@ -69,7 +82,9 @@
         #Settings
       >
         <a>
-          <span class="icon"><i class="fa-solid fa-gear"></i></span>
+          <span class="icon"
+            ><fa-icon style="font-size: 1.2rem" [icon]="faGear"></fa-icon
+          ></span>
           <span class="title">Settings</span>
         </a>
       </li>
@@ -81,7 +96,10 @@
       >
         <a (click)="signOut()">
           <span class="icon"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ><fa-icon
+              style="font-size: 1.2rem"
+              [icon]="faArrowRightFromBracket"
+            ></fa-icon
           ></span>
           <span class="title">Sign Out</span>
         </a>
