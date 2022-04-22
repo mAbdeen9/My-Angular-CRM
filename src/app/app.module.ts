@@ -10,9 +10,15 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { DashBoardComponent } from './components/dash-board/dash-board.component';
+import { MsgFromServerComponent } from './components/msg-from-server/msg-from-server.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

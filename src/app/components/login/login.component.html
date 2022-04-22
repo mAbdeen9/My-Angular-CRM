@@ -1,1 +1,91 @@
-<p>login works!</p>
+<div class="main">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="login-box">
+        <form #loginForm="ngForm">
+          <h1>Login</h1>
+          <div class="username">
+            <span class="wrap-span">E-mail</span>
+            <div class="flex-box">
+              <div>👤</div>
+              <input
+                (click)="onCheck()"
+                class="input-l"
+                type="email"
+                placeholder="Type your  email"
+                name="email"
+                [(ngModel)]="user.email"
+              />
+            </div>
+            <div
+              class="check"
+              #check
+              style="
+                color: #b33a3a;
+                font-size: small;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              *invalid email
+            </div>
+          </div>
+          <div class="password">
+            <span class="wrap-span">Password</span>
+            <div class="flex-box">
+              <div>🔓</div>
+              <input
+                (click)="onCheckPass()"
+                minlength="6"
+                maxlength="16"
+                class="input-l"
+                type="password"
+                placeholder="Type your password"
+                name="password"
+                [(ngModel)]="user.password"
+              />
+            </div>
+            <div
+              class="check"
+              #checkPass
+              style="
+                color: #b33a3a;
+                font-size: small;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              *invalid password
+            </div>
+          </div>
+          <div (click)="login()" class="login-btn">
+            <button>LOGIN</button>
+          </div>
+          <div
+            class="errorMsg"
+            #errorMsg
+            style="text-align: center; color: #ea4336; font-weight: bold"
+          >
+            " invalid email or password "
+          </div>
+          <div>
+            <h2><span>Or</span></h2>
+          </div>
+          <div class="google-box">
+            <p>Login with Google</p>
+            <img
+              (click)="loginGmail()"
+              src="/../assets/google-logo-9808.png"
+              alt=""
+            />
+          </div>
+          <div class="sign-up">
+            <p>
+              Don't have an account? <span (click)="signUp()">Sign up</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
