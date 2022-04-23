@@ -10,8 +10,7 @@
   background: linear-gradient(
     90deg,
     rgba(17, 206, 224, 1) 0%,
-    rgba(108, 128, 237, 1) 35%,
-    rgba(200, 22, 227, 1) 100%
+    rgba(108, 128, 237, 1) 35%
   );
 }
 
@@ -108,8 +107,7 @@ h1 {
   background: linear-gradient(
     90deg,
     rgba(17, 206, 224, 1) 0%,
-    rgba(108, 128, 237, 1) 35%,
-    rgba(200, 22, 227, 1) 100%
+    rgba(108, 128, 237, 1) 35%
   );
   border-radius: 1rem;
   margin: 1.4rem auto;

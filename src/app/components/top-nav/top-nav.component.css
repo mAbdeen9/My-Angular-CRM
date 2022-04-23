@@ -46,7 +46,6 @@ img {
   top: 0;
   width: 60px;
   height: 60px;
-  /* background-color: #ccc; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,5 +60,11 @@ img {
   }
   .main-top-nav.active {
     left: 70px;
+  }
+
+  .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

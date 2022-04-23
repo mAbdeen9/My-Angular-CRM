@@ -178,8 +178,9 @@
 @media (max-width: 991px) {
   .dashboard {
     position: relative;
-    width: calc(100%);
-    left: 0;
+    width: calc(100% - 70px);
+    left: -40px;
+    top: 70px;
   }
 
   .dashboard.active {
