@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     if (localStorage.getItem('/z!/!@')) {
       this.router.navigateByUrl('/messageFromServer');
       setTimeout(() => {
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/home/Dashboard');
       }, 3000);
     }
   }
@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
     try {
       let userD = await this.authFire.loginWithGoogle();
       localStorage.setItem('/z!/!@', JSON.stringify(userD.user.displayName));
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home/Dashboard');
     } catch (err) {
       console.log(err);
       alert('Failed To Connect !');

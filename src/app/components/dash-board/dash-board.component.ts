@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dash-board.component.css'],
 })
 export class DashBoardComponent implements OnInit {
-  @Input() classNav: string | undefined;
   constructor() {}
 
   ngOnInit(): void {}

@@ -21,7 +21,7 @@
   width: 100%;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 2fr 0.8fr;
+  grid-template-columns: 1fr;
   grid-gap: 30px;
 }
 
@@ -123,53 +123,6 @@
   font-weight: 500;
 }
 
-.recent-contacts {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  /* align-items: center; */
-  min-height: 500px;
-  padding: 20px;
-  min-height: 500px;
-  background: #fff;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-}
-
-.recent-contacts .imgBox {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.recent-contacts .imgBox img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.recent-contacts table tr:hover {
-  background: rgba(108, 128, 237, 1);
-  color: #fff;
-  cursor: pointer;
-}
-
-.recent-contacts table tr td {
-  padding: 12px 10px;
-}
-
-.recent-contacts table tr h4 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2rem;
-}
-
 @media (max-width: 991px) {
   .dashboard {
     position: relative;
@@ -178,11 +131,5 @@
     top: 70px;
     transition: 0.5s;
     background-color: transparent;
-  }
-}
-
-@media (max-width: 768px) {
-  .cards__box {
-    grid-template-columns: repeat(1, 1fr);
   }
 }

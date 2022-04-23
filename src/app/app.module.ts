@@ -17,9 +17,11 @@ import { HomeComponent } from './components/home/home.component';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
 import { MsgFromServerComponent } from './components/msg-from-server/msg-from-server.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CustomersComponent } from './components/customers/customers.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -11,7 +11,7 @@ export class MsgFromServerComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home/Dashboard');
     }, 1000);
   }
 }

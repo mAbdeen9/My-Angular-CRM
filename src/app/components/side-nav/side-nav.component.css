@@ -13,11 +13,6 @@
   background: rgba(108, 128, 237, 1);
   border-left: 10px solid rgba(108, 128, 237, 1);
   transition: 0.5s;
-  overflow: hidden;
-}
-
-.nav.active {
-  width: 80px;
 }
 
 .nav ul {
@@ -118,9 +113,7 @@
 
 @media (max-width: 991px) {
   .nav {
-    left: -300px;
-  }
-  .nav.active {
-    left: 0;
+    overflow: hidden;
+    width: 75px;
   }
 }

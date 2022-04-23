@@ -17,11 +17,11 @@ export class TopNavComponent implements OnInit {
 
   sendClass() {
     let main = document.querySelector('.main-top-nav');
-    if (main?.classList.contains('active')) {
-      main?.classList.remove('active');
-    } else {
-      main?.classList.add('active');
-    }
-    this.messageEvent.emit();
+    let dash = document.querySelector('.dashboard');
+    let nav = document.querySelector('.nav');
+
+    main?.classList.toggle('active');
+    dash?.classList.toggle('active');
+    nav?.classList.toggle('active');
   }
 }
