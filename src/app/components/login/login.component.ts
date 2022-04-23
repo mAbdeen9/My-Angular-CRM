@@ -97,7 +97,7 @@ export class LoginComponent implements OnInit {
   }
 
   signUp() {
-    let modalRef = this.modal.open(SignUpComponent, {
+    this.modal.open(SignUpComponent, {
       size: 'lg',
       centered: true,
       windowClass: 'dark-modal',

@@ -20,9 +20,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent, PageNotFoundComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent, PageNotFoundComponent, AddContactComponent, AddCustomerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

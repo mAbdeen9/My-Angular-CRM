@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
           '/z!/!@',
           JSON.stringify(this.user.email?.split('@')[0])
         );
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/home/Dashboard');
       })
       .catch((err) => {
         if (
