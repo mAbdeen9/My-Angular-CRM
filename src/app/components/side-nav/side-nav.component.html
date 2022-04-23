@@ -1,109 +1,96 @@
-<div class="cont">
-  <div class="nav">
-    <ul>
-      <li>
-        <a>
-          <span class="icon"
-            ><fa-icon style="font-size: 1.4rem" [icon]="faA"></fa-icon>
-          </span>
-          <span style="margin-top: 3px; font-weight: bold" class="title"
-            >Angular Crm</span
-          >
-        </a>
-      </li>
-      <li
-        (mouseover)="
-          hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, dash)
-        "
-        #dash
-      >
-        <a routerLink="Dashboard">
-          <span class="icon"
-            ><fa-icon style="font-size: 1.2rem" [icon]="faHouse"></fa-icon
-          ></span>
-          <span #dash class="title">Dashboard</span>
-        </a>
-      </li>
-      <li
-        (mouseover)="
-          hoverFun(
-            dash,
-            Customers,
-            Contacts,
-            Reports,
-            Settings,
-            Sign,
-            Customers
-          )
-        "
-        #Customers
-      >
-        <a routerLink="Customers">
-          <span class="icon"
-            ><fa-icon style="font-size: 1.2rem" [icon]="faUserGroup"></fa-icon
-          ></span>
-          <span class="title">Customers</span>
-        </a>
-      </li>
-      <li
-        (mouseover)="
-          hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Contacts)
-        "
-        #Contacts
-      >
-        <a routerLink="Contacts">
-          <span class="icon"
-            ><fa-icon style="font-size: 1.2rem" [icon]="faAddressCard"></fa-icon
-          ></span>
-          <span class="title">Contacts</span>
-        </a>
-      </li>
-      <li
-        (mouseover)="
-          hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Reports)
-        "
-        #Reports
-      >
-        <a>
-          <span class="icon"
-            ><fa-icon
-              style="font-size: 1.2rem"
-              [icon]="faFileArchive"
-            ></fa-icon>
-          </span>
-          <span class="title">Reports</span>
-        </a>
-      </li>
+<div class="nav">
+  <ul>
+    <li>
+      <a>
+        <span class="icon"
+          ><fa-icon style="font-size: 1.4rem" [icon]="faA"></fa-icon>
+        </span>
+        <span style="margin-top: 3px; font-weight: bold" class="title"
+          >Angular Crm</span
+        >
+      </a>
+    </li>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, dash)
+      "
+      #dash
+    >
+      <a routerLink="Dashboard">
+        <span class="icon"
+          ><fa-icon style="font-size: 1.2rem" [icon]="faHouse"></fa-icon
+        ></span>
+        <span #dash class="title">Dashboard</span>
+      </a>
+    </li>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Customers)
+      "
+      #Customers
+    >
+      <a routerLink="Customers">
+        <span class="icon"
+          ><fa-icon style="font-size: 1.2rem" [icon]="faUserGroup"></fa-icon
+        ></span>
+        <span class="title">Customers</span>
+      </a>
+    </li>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Contacts)
+      "
+      #Contacts
+    >
+      <a routerLink="Contacts">
+        <span class="icon"
+          ><fa-icon style="font-size: 1.2rem" [icon]="faAddressCard"></fa-icon
+        ></span>
+        <span class="title">Contacts</span>
+      </a>
+    </li>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Reports)
+      "
+      #Reports
+    >
+      <a>
+        <span class="icon"
+          ><fa-icon style="font-size: 1.2rem" [icon]="faFileArchive"></fa-icon>
+        </span>
+        <span class="title">Reports</span>
+      </a>
+    </li>
 
-      <li
-        (mouseover)="
-          hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Settings)
-        "
-        #Settings
-      >
-        <a>
-          <span class="icon"
-            ><fa-icon style="font-size: 1.2rem" [icon]="faGear"></fa-icon
-          ></span>
-          <span class="title">Settings</span>
-        </a>
-      </li>
-      <li
-        (mouseover)="
-          hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Sign)
-        "
-        #Sign
-      >
-        <a (click)="signOut()">
-          <span class="icon"
-            ><fa-icon
-              style="font-size: 1.2rem"
-              [icon]="faArrowRightFromBracket"
-            ></fa-icon
-          ></span>
-          <span class="title">Sign Out</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Settings)
+      "
+      #Settings
+    >
+      <a>
+        <span class="icon"
+          ><fa-icon style="font-size: 1.2rem" [icon]="faGear"></fa-icon
+        ></span>
+        <span class="title">Settings</span>
+      </a>
+    </li>
+    <li
+      (mouseover)="
+        hoverFun(dash, Customers, Contacts, Reports, Settings, Sign, Sign)
+      "
+      #Sign
+    >
+      <a (click)="signOut()">
+        <span class="icon"
+          ><fa-icon
+            style="font-size: 1.2rem"
+            [icon]="faArrowRightFromBracket"
+          ></fa-icon
+        ></span>
+        <span class="title">Sign Out</span>
+      </a>
+    </li>
+  </ul>
 </div>

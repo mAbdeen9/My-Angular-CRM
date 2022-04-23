@@ -32,7 +32,7 @@
   min-height: 500px;
   background-color: #fff;
   width: 100%;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   /* overflow: scroll; */
 }
@@ -86,13 +86,7 @@
   padding: 10px;
 }
 
-.cards__box .recent-customer table tr td:last-child {
-  text-align: end;
-}
-.cards__box .recent-customer table tr td:nth-child(2) {
-  text-align: center;
-}
-.cards__box .recent-customer table tr td:nth-child(3) {
+.cards__box .recent-customer table tr td {
   text-align: center;
 }
 
@@ -122,6 +116,33 @@
   font-size: 14px;
   font-weight: 500;
 }
+.serch-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.serch-box input {
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  font-size: large;
+  /* text-align: center; */
+  letter-spacing: 5px;
+  border: none;
+}
+
+.btn__add {
+  padding: 0.6rem 2rem;
+  background: rgba(108, 128, 237, 1);
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+
+  cursor: pointer;
+}
 
 @media (max-width: 991px) {
   .dashboard {
@@ -131,5 +152,11 @@
     top: 70px;
     transition: 0.5s;
     background-color: transparent;
+  }
+}
+
+@media (max-width: 1200px) {
+  .serch-box {
+    flex-direction: column;
   }
 }
