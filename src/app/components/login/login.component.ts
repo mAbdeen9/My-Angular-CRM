@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
     }
     try {
       let userD = await this.authFire.login(this.user);
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home/Dashboard');
       this.user = { email: '', password: '' };
       localStorage.setItem(
         '/z!/!@',

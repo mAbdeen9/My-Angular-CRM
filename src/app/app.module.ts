@@ -19,9 +19,10 @@ import { MsgFromServerComponent } from './components/msg-from-server/msg-from-se
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
