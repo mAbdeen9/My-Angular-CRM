@@ -24,58 +24,30 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-            <td><span class="status active">Active</span></td>
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-            <td><span class="status churned">Churned</span></td>
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-            <td><span class="status idle">--Idle--</span></td>
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-            <td><span class="status active">Active</span></td>
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
+          <ng-container *ngIf="customers.length > 0; else noCustmer">
+            <tr *ngFor="let customer of customers; index as i">
+              <td>{{ i + 1 }}</td>
+              <td>{{ customer.name }}</td>
+              <td>{{ customer.phone }}</td>
+              <td>{{ customer.email }}</td>
+              <td>
+                <span class="status {{ customer.status }}">{{
+                  customer.status
+                }}</span>
+              </td>
+              <td>
+                <fa-icon
+                  style="font-size: 1.2rem"
+                  [icon]="faPenToSquare"
+                ></fa-icon>
+              </td>
+            </tr>
+          </ng-container>
+          <ng-template #noCustmer>
+            <div class="msg">
+              <h3 style="margin-bottom: 300px">No Customers</h3>
+            </div></ng-template
+          >
         </tbody>
       </table>
     </div>

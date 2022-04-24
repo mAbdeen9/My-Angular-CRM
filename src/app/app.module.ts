@@ -24,7 +24,21 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TopNavComponent, SideNavComponent, HomeComponent, DashBoardComponent, MsgFromServerComponent, CustomersComponent, ContactsComponent, PageNotFoundComponent, AddContactComponent, AddCustomerComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    TopNavComponent,
+    SideNavComponent,
+    HomeComponent,
+    DashBoardComponent,
+    MsgFromServerComponent,
+    CustomersComponent,
+    ContactsComponent,
+    PageNotFoundComponent,
+    AddContactComponent,
+    AddCustomerComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
