@@ -1,0 +1,48 @@
+<div class="box_customer">
+  <div><h2>Update Customer</h2></div>
+  <form #addcust="ngForm">
+    <div class="input__box">
+      <label for="name">Name : </label>
+      <input
+        type="text"
+        [(ngModel)]="customer.name"
+        #name="ngModel"
+        name="name"
+      />
+    </div>
+
+    <div class="input__box">
+      <label for="phone">Phone : </label>
+      <input
+        type="text"
+        [(ngModel)]="customer.phone"
+        #phone="ngModel"
+        name="phone"
+      />
+    </div>
+
+    <div class="input__box">
+      <label for="name">E-mail : </label>
+      <input
+        type="text"
+        [(ngModel)]="customer.email"
+        #email="ngModel"
+        name="email"
+      />
+    </div>
+
+    <div class="input__box">
+      <label for="name">Status : </label>
+      <select [(ngModel)]="customer.status" #status="ngModel" name="status">
+        <option value="active">Active</option>
+        <option value="churned">Churned</option>
+        <option value="idle">Idle</option>
+      </select>
+    </div>
+
+    <div style="text-align: center; margin-top: 1rem">
+      <button (click)="updateCustomer()" class="btn_add">Update</button>
+      <button (click)="deleteCustomer(customer)" class="btn_del">Delete</button>
+    </div>
+  </form>
+</div>

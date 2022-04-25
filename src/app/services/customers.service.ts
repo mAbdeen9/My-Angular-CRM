@@ -7,6 +7,7 @@ import {
   doc,
   docData,
   Firestore,
+  setDoc,
   updateDoc,
 } from '@angular/fire/firestore';
 import { Customer } from '../interfaces/customer';
@@ -30,5 +31,23 @@ export class CustomersService {
     return collectionData(this.CustomersRef, { idField: 'id' }) as Observable<
       Customer[]
     >;
+  }
+
+  deleteCustomer(customer: Customer) {
+    let CustomerRef = doc(this.firestore, `Customers/${customer.id}`);
+
+    return deleteDoc(CustomerRef);
+  }
+
+  updateCustomer(customer: Customer) {
+    let CustomerRef = doc(this.firestore, `Customers/${customer.id}`);
+
+    return setDoc(CustomerRef, customer);
+  }
+
+  getCustomerById(id: string) {
+    let CustomerRef = doc(this.firestore, `Customers/${id}`);
+
+    return docData(CustomerRef, { idField: 'id' }) as Observable<Customer>;
   }
 }

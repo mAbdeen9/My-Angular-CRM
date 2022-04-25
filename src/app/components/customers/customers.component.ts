@@ -4,6 +4,7 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { AddCustomerComponent } from '../add-customer/add-customer.component';
 import { CustomersService } from 'src/app/services/customers.service';
 import { Customer } from 'src/app/interfaces/customer';
+import { UpdateCustomerDeleteComponent } from '../update-customer-delete/update-customer-delete.component';
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
@@ -30,5 +31,15 @@ export class CustomersComponent implements OnInit {
       windowClass: 'dark-modal',
     });
     this.customerSer.bs = boxWindow;
+  }
+
+  updateBook(customer: Customer) {
+    let modalRef = this.modal.open(UpdateCustomerDeleteComponent, {
+      size: 'lg',
+      centered: true,
+      windowClass: 'dark-modal',
+    });
+
+    modalRef.componentInstance.id = customer.id;
   }
 }
