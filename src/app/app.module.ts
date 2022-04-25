@@ -25,6 +25,7 @@ import { AddCustomerComponent } from './components/add-customer/add-customer.com
 import { FillterCustomerPipe } from './pipes/fillter-customer.pipe';
 import { UpdateCustomerDeleteComponent } from './components/update-customer-delete/update-customer-delete.component';
 import { UpdateContactsDeleteComponent } from './components/update-contacts-delete/update-contacts-delete.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UpdateContactsDeleteComponent } from './components/update-contacts-dele
     FillterCustomerPipe,
     UpdateCustomerDeleteComponent,
     UpdateContactsDeleteComponent,
+    UnderConstructionComponent,
   ],
   imports: [
     BrowserModule,
