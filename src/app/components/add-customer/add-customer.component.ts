@@ -11,7 +11,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AddCustomerComponent implements OnInit {
   customer: Customer = {
     name: '',
-    phone: [],
+    phone: '',
     email: '',
     status: '',
   };
@@ -24,7 +24,7 @@ export class AddCustomerComponent implements OnInit {
     if (
       this.customer.email == '' ||
       this.customer.name == '' ||
-      this.customer.phone == [] ||
+      this.customer.phone == '' ||
       this.customer.status == ''
     )
       return;
@@ -35,6 +35,6 @@ export class AddCustomerComponent implements OnInit {
   }
 
   reset() {
-    this.customer = { name: '', phone: [], email: '', status: '' };
+    this.customer = { name: '', phone: '', email: '', status: '' };
   }
 }

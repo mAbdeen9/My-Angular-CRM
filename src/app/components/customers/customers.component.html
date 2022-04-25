@@ -1,55 +1,88 @@
 <div class="dashboard">
   <div class="cards__box">
     <div class="serch-box">
-      <div><input type="text" name="" id="" placeholder="  🔍 Name" /></div>
-      <div><input type="text" name="" id="" placeholder="  🔍 Phone" /></div>
-      <div><input type="text" name="" id="" placeholder="  🔍 E-mail" /></div>
+      <div>
+        <input
+          [(ngModel)]="name"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 Name"
+        />
+      </div>
+      <div>
+        <input
+          [(ngModel)]="phone"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 Phone"
+        />
+      </div>
+      <div>
+        <input
+          [(ngModel)]="email"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 E-mail"
+        />
+      </div>
       <div>
         <button (click)="addCustomer()" class="btn__add">Add Customer</button>
       </div>
     </div>
     <div class="recent-customer">
       <div class="card__header">
-        <h2>Customer</h2>
+        <h2>Customers</h2>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <td>No.</td>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>E-mail</td>
-            <td>Status</td>
-            <td>Edit</td>
-          </tr>
-        </thead>
-        <tbody>
-          <ng-container *ngIf="customers.length > 0; else noCustmer">
-            <tr *ngFor="let customer of customers; index as i">
-              <td>{{ i + 1 }}</td>
-              <td>{{ customer.name }}</td>
-              <td>{{ customer.phone }}</td>
-              <td>{{ customer.email }}</td>
-              <td>
-                <span class="status {{ customer.status }}">{{
-                  customer.status
-                }}</span>
-              </td>
-              <td>
-                <fa-icon
-                  style="font-size: 1.2rem"
-                  [icon]="faPenToSquare"
-                ></fa-icon>
-              </td>
+      <div
+        *ngIf="
+          customers
+            | fillterCustomer: 'name':name
+            | fillterCustomer: 'phone':phone
+            | fillterCustomer: 'email':email as customers
+        "
+      >
+        <table>
+          <thead>
+            <tr>
+              <td>No.</td>
+              <td>Name</td>
+              <td>Phone</td>
+              <td>E-mail</td>
+              <td>Status</td>
+              <td>Edit</td>
             </tr>
-          </ng-container>
-          <ng-template #noCustmer>
-            <div class="msg">
-              <h3 style="margin-bottom: 300px">No Customers</h3>
-            </div></ng-template
-          >
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="customers.length > 0; else noCustmer">
+              <tr *ngFor="let customer of customers; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>{{ customer.email }}</td>
+                <td>
+                  <span class="status {{ customer.status }}">{{
+                    customer.status
+                  }}</span>
+                </td>
+                <td>
+                  <fa-icon
+                    style="font-size: 1.2rem"
+                    [icon]="faPenToSquare"
+                  ></fa-icon>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noCustmer>
+              <div class="msg">
+                <h3 style="margin-bottom: 300px">No Customers</h3>
+              </div></ng-template
+            >
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

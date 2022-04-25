@@ -22,6 +22,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { FillterCustomerPipe } from './pipes/fillter-customer.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AddCustomerComponent } from './components/add-customer/add-customer.com
     PageNotFoundComponent,
     AddContactComponent,
     AddCustomerComponent,
+    FillterCustomerPipe,
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,10 @@ import { Customer } from 'src/app/interfaces/customer';
 })
 export class CustomersComponent implements OnInit {
   faPenToSquare = faPenToSquare;
-  customers: Customer[] = [];
+  customers: any[] = [];
+  name: string = '';
+  phone: string = '';
+  email: string = '';
   constructor(private modal: NgbModal, private customerSer: CustomersService) {}
 
   ngOnInit(): void {
