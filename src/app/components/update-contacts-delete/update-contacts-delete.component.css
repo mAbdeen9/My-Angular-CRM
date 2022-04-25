@@ -40,4 +40,16 @@
   border-radius: 6px;
   cursor: pointer;
   border: 0;
+  margin: 5px;
+}
+
+.btn_del {
+  padding: 5px 20px;
+  background: red;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0;
+  margin: 5px;
 }

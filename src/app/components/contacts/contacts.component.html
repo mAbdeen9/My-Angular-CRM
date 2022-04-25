@@ -1,9 +1,33 @@
 <div class="dashboard">
   <div class="cards__box">
     <div class="serch-box">
-      <div><input type="text" name="" id="" placeholder="  🔍 Name" /></div>
-      <div><input type="text" name="" id="" placeholder="  🔍 Phone" /></div>
-      <div><input type="text" name="" id="" placeholder="  🔍 E-mail" /></div>
+      <div>
+        <input
+          [(ngModel)]="name"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 Name"
+        />
+      </div>
+      <div>
+        <input
+          [(ngModel)]="phone"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 Phone"
+        />
+      </div>
+      <div>
+        <input
+          [(ngModel)]="email"
+          type="text"
+          name=""
+          id=""
+          placeholder="  🔍 E-mail"
+        />
+      </div>
       <div>
         <button (click)="addContact()" class="btn__add">Add Contact</button>
       </div>
@@ -12,72 +36,49 @@
       <div class="card__header">
         <h2>Contacts</h2>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <td>No.</td>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>E-mail</td>
+      <div
+        *ngIf="
+          contacts
+            | fillterCustomer: 'name':name
+            | fillterCustomer: 'phone':phone
+            | fillterCustomer: 'email':email as contacts
+        "
+      >
+        <table>
+          <thead>
+            <tr>
+              <td>No.</td>
+              <td>Name</td>
+              <td>Phone</td>
+              <td>E-mail</td>
 
-            <td>Edit</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
+              <td>Edit</td>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="contacts.length > 0; else noCustmer">
+              <tr *ngFor="let contact of contacts; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.email }}</td>
 
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Julia Abdeen</td>
-            <td>052-5195131</td>
-            <td>Julia@devpro.io</td>
-
-            <td>
-              <fa-icon
-                style="font-size: 1.2rem"
-                [icon]="faPenToSquare"
-              ></fa-icon>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                <td (click)="updateContact(contact)">
+                  <fa-icon
+                    style="font-size: 1.2rem"
+                    [icon]="faPenToSquare"
+                  ></fa-icon>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noCustmer>
+              <div class="msg">
+                <h3 style="margin-bottom: 300px">No Contacts</h3>
+              </div></ng-template
+            >
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

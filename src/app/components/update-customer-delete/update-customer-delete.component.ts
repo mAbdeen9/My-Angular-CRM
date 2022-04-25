@@ -30,7 +30,7 @@ export class UpdateCustomerDeleteComponent implements OnInit {
   updateCustomer() {
     this.bs.updateCustomer(this.customer).then(() => {
       this.activeModal.close();
-      alert('Book Updated successfully!');
+      alert('customer Updated successfully!');
     });
   }
 

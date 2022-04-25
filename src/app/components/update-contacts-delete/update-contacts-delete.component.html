@@ -1,6 +1,6 @@
 <div class="box_customer">
-  <div><h2>Add Contact</h2></div>
-  <form #addcust="ngForm" (ngSubmit)="submitAddcust()">
+  <div><h2>Update Contact</h2></div>
+  <form #addcust="ngForm">
     <div class="input__box">
       <label for="name">Name : </label>
       <input
@@ -32,7 +32,8 @@
     </div>
 
     <div style="text-align: center; margin-top: 1rem">
-      <button class="btn_add">Add</button>
+      <button (click)="updateCustomer()" class="btn_add">Update</button>
+      <button (click)="deleteCustomer(contact)" class="btn_del">Delete</button>
     </div>
   </form>
 </div>
