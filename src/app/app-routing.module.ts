@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MsgFromServerComponent } from './components/msg-from-server/msg-from-server.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { AuthGGuard } from './services/auth-g.guard';
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
       {
         path: 'Dashboard',
         component: DashBoardComponent,
+      },
+      {
+        path: 'underConstruction',
+        component: UnderConstructionComponent,
       },
     ],
   },
