@@ -3,7 +3,7 @@ import { Contact } from 'src/app/interfaces/contact';
 import { Customer } from 'src/app/interfaces/customer';
 import { ContactsService } from 'src/app/services/contacts.service';
 import { CustomersService } from 'src/app/services/customers.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
@@ -15,7 +15,8 @@ export class DashBoardComponent implements OnInit {
 
   constructor(
     private contactSer: ContactsService,
-    private customerSer: CustomersService
+    private customerSer: CustomersService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
