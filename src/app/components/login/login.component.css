@@ -203,7 +203,7 @@ h2 span {
   }
 }
 
-@media (max-height: 635px) {
+@media (max-height: 734px) {
   .login-box {
     width: 100%;
     height: 100%;
